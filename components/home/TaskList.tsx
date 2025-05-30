@@ -1,8 +1,8 @@
-import React from "react";
-import { FlatList, ActivityIndicator, StyleSheet } from "react-native";
-import TaskCard from "./TaskCard";
-import { Task } from "../../types/task";
 import { COLORS } from "@/constants/theme";
+import React from "react";
+import { ActivityIndicator, FlatList, StyleSheet } from "react-native";
+import { Task } from "../../types/task";
+import TaskCard from "./TaskCard";
 
 interface TaskListProps {
   tasks: Task[];

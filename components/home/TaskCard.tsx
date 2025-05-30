@@ -1,10 +1,9 @@
-import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Feather } from "@expo/vector-icons";
-import Animated, { FadeInDown } from "react-native-reanimated";
 import AppPopup from "@/components/common/AppPopup";
+import { deleteTask, toggleCompleted } from "@/redux/feature/task/tasksSlice";
+import { Feather } from "@expo/vector-icons";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useDispatch } from "react-redux";
-import { toggleCompleted, deleteTask } from "@/redux/feature/task/tasksSlice";
 
 interface TaskCardProps {
   task: {

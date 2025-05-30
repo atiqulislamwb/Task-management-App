@@ -4,6 +4,7 @@ import { AppDispatch } from "../../redux/store";
 
 import { login } from "@/redux/feature/auth/authSlice";
 import * as Linking from "expo-linking";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
   ActivityIndicator,
@@ -20,7 +21,7 @@ const SocialLoginButton = ({
   strategy: "facebook" | "google" | "apple";
 }) => {
   const dispatch = useDispatch<AppDispatch>();
-
+const router = useRouter()
   const getStrategy = () => {
     if (strategy === "facebook") {
       return "oauth_facebook";
@@ -68,6 +69,7 @@ const SocialLoginButton = ({
         await user?.reload();
 
         dispatch(login({ sessionId: createdSessionId }));
+        router.replace("/home")
       } else {
       }
     } catch (err) {

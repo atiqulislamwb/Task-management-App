@@ -1,5 +1,6 @@
 import { COLORS } from "@/constants/theme";
 import { Redirect } from "expo-router";
+import React from "react";
 import { ActivityIndicator, View } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";

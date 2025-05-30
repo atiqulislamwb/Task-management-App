@@ -21,8 +21,10 @@ export default function RootLayout() {
   if (!publishableKey) {
     throw new Error("Add key");
   }
+
+  
   return (
-    <>
+    
       <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
         <ClerkLoaded>
           <Provider store={store}>
@@ -40,6 +42,6 @@ export default function RootLayout() {
           </Provider>
         </ClerkLoaded>
       </ClerkProvider>
-    </>
+    
   );
 }
