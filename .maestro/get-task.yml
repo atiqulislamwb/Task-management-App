@@ -1,0 +1,6 @@
+appId: host.exp.Exponent
+---
+- launchApp
+- tapOn: taskmanagement
+- assertVisible: "Task Manager"
+- assertVisible: "Mock Task 1"

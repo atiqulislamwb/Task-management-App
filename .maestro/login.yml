@@ -1,0 +1,6 @@
+appId: host.exp.Exponent
+---
+- launchApp
+- tapOn: taskmanagement
+- assertVisible: "Welcome"
+- tapOn: "Continue with goggle"

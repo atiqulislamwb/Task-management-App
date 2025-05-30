@@ -1,0 +1,9 @@
+appId: host.exp.Exponent
+---
+- launchApp
+- tapOn: taskmanagement
+- assertVisible: "Task Manager"
+- tapOn:
+    id: "delete0"
+
+- assertVisible: Deleted successfully

@@ -1,0 +1,16 @@
+appId: host.exp.Exponent
+---
+- launchApp
+- tapOn: taskmanagement
+- assertVisible: "Task Manager"
+- tapOn:
+    id: "add"
+
+- tapOn: "Task Title"
+- inputText: "Demo task "
+- tapOn: "Task details"
+- inputText: "Demo task details "
+
+- tapOn:
+    id: "submit"
+- assertVisible: Task added
